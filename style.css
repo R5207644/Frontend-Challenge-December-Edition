@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #ffe6f2, #ffccdf);
+  color: #4d004d;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+/* General Styles for Header, Sections, Footer */
+section,
+#main-header,
+#main-footer {
+  margin: 20px auto;
+  max-width: 95%;
+  background: #ffe6f2;
+  border-radius: 20px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15), -10px -10px 25px #ffffff;
+  padding: 30px;
+}
+
+/* Header */
+#main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle, #ffccdf, #ffe6f2);
+  border: 2px solid #ff99c8;
+  transform: rotate(-2deg);
+  animation: rotateGlow 4s infinite ease-in-out;
+}
+
+@keyframes rotateGlow {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+#main-header h1 {
+  font-size: 3rem;
+  color: #4d004d;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Navigation */
+#main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+#main-nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #800060;
+  padding: 10px 5px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffccdf, #ffe6f2);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px #ffffff;
+  transition: all 0.4s ease;
+}
+
+#main-nav ul li a:hover {
+  background: #ff99c8;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Sections Layout */
+section {
+  position: relative;
+  overflow: hidden;
+  border-left: 8px solid #ff99c8;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #800060;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section p,
+section article {
+  font-size: 1.1rem;
+  color: #4d004d;
+  line-height: 1.8;
+}
+
+article {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #ffe6f2;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px #ffffff;
+}
+
+/* Footer */
+#main-footer {
+  text-align: center;
+  border-top: 8px solid #ff99c8;
+}
+
+#main-footer p {
+  font-size: 1.2rem;
+  color: #4d004d;
+}
+
+#footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+#footer-nav ul li a {
+  text-decoration: none;
+  color: #800060;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+#footer-nav ul li a:hover {
+  background: #ff99c8;
+  color: white;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #ff99c8;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15), -6px -6px 10px #ffffff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background: #800060;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px #ffffff;
+}
+
+/* Section Background Art */
+section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: #ff99c8;
+  opacity: 0.2;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: #ff99c8;
+  opacity: 0.2;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #main-header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section p,
+  section article {
+    font-size: 1rem;
+  }
+}
